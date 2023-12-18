@@ -81,7 +81,7 @@ $ python manage.py runserver
 4. Exit the environment:
     ````bash
     $ exit
-    ```
+    ````
 
 ## Project using Docker
 ### Now if you have Docker, see the project to use it with.
@@ -108,7 +108,7 @@ This project uses Docker to manage its environment. To run it locally, follow th
 3. Check ``Dockerfile`` if you do not have an image download from ``Docker Hub``:
     ````bash
     $ docker pull python:3.11-alpine
-    ```
+    ````
 
 Your project should now be available in your browser at `https://localhost:1212/posts`. - Here `posts/` means this from application Django.
 
@@ -128,7 +128,7 @@ Your project should now be available in your browser at `https://localhost:1212/
 2. Enter the command:
     ````bash
     $ python manage.py runserver
-    ```
+    ````
 
 ### Create a post
 1. **Go to `admin` Page:**
