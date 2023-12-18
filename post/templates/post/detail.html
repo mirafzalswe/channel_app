@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}
+    detail
+{% endblock title %}
+
+{% block body %}
+    <div class="detail">
+        <div class="post-detail">
+            {% if post.image %}
+            <div class="image-post">
+                <img src="{{ post.image.url }}" alt="">
+            </div>
+            {% endif %}
+            <div class="post-content">
+                <div class="title-post">
+                    <h2 style="font-family: 'Permanent Marker', cursive ">{{ post.title }}</h2>
+                </div>
+                <div class="body-post">
+                </div>
+                <p style="font-family: 'Pacifico', cursive">{{ post.content }}</p>
+            </div>
+        </div>
+    </div>
+{% endblock body %}

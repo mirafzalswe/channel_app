@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/081c4004bc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'post/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Permanent+Marker&family=Smooch&display=swap" rel="stylesheet">
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"><a href="">Channel App</a></div>
+        <div class="navbar_menu">
+
+                <ul class="navbar_menu">
+                    <li class="nav-item"><a href=""></a><i class="fa-solid fa-magnifying-glass"></i>   Search</li>
+                    <li class="nav-item"><a href=""></a><i class="fa-solid fa-user"></i>   Profile</li>
+                    <li class="nav-item"><a href=""></a><i class="fa-solid fa-house"></i>   Home</li>
+                </ul>
+        </div>
+    </div>
+    {% block body %}{% endblock body %}
+</body>
+</html>

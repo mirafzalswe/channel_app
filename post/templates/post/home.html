@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}
+    home
+{% endblock title %}
+{% block body %}
+
+    {% for i in posts %}
+
+    <div class="container">
+        <div class="card" {% if i.image %} style="height: 540px; width:800px;"{% endif %}>
+            {% if i.image %}
+                <div class="image">
+                    <img class="image-content" src="{{ i.image.url }}" alt="">
+                </div>
+            {% endif %}
+            <div class="content">
+                <div class="title">
+                    <h3 style="font-size: 30px">{{ i.title }}</h3>
+                </div>
+                <div class="body">
+                    <p style="font-family: 'Pacifico', cursive">{{ i.content|truncatewords:35}}</p>
+                </div>
+                <a href="{% url 'Detail' i.id %}" class="readmoree">read moree</a>
+                <div class="botton">
+                    <div class="time">
+                    <p>{{ i.time }}</p>
+                </div>
+                    <div class="icon">
+                        <i class="fa-regular fa-comment m"></i>
+                        <i class="fa-regular fa-star m"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
+
+{% endblock body %}
